@@ -228,9 +228,22 @@ export default function App() {
           </div>
         </div>
 
+        {/* Project Authors & Group Members */}
+        <div className="footer-team-strip">
+          <span className="footer-team-heading">Project Research & Engineering Group:</span>
+          <div className="footer-members-list">
+            {PROJECT_INFO.team.map((member, idx) => (
+              <div key={idx} className="footer-member-chip">
+                <span className="footer-member-name">{member.name}</span>
+                <span className="footer-member-urn">({member.urn})</span>
+                <span className="footer-member-role">{member.role}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="footer-bottom">
           <span>{PROJECT_INFO.institution} • {PROJECT_INFO.departments}</span>
-          <span>Lead CV Researcher: Prem Bhandakkar (2023-B-14032006)</span>
           <span>Ultralytics YOLO • FastAPI • OpenCV • Leaflet • React Three.js</span>
         </div>
       </footer>
